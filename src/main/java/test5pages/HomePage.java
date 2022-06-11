@@ -33,14 +33,7 @@ public class HomePage extends BasePage {
 
         getLoginBtn().click();
     }
-    public void clickUsernameBar() {
 
-        getUsernameBar().click();
-    }
-    public void clickPasswordBae() {
-
-        getPasswordBar().click();
-    }
 
     public void enterAllLoginOptions (String username, String pass){
        getUsernameBar().sendKeys(username);
@@ -50,5 +43,8 @@ public class HomePage extends BasePage {
 
     public WebElement getLoginErrorMsg() {
         return getDriver().findElement(this.loginErrorMsg);
+    }
+    public String errorrMsgText (){
+        return getLoginErrorMsg().getText();
     }
 }

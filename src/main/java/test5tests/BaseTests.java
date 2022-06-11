@@ -41,12 +41,36 @@ public abstract class BaseTests {
     public void afterClass() {
         driver.close();
     }
+
     public WebDriver getDriver() {
         return driver;
     }
 
-    public HomePage getLoginPage() {
+    public WebDriverWait getDriverWait() {
+        return driverWait;
+    }
+
+    public CartPage getCartPage() {
+        return cartPage;
+    }
+
+    public ChackoutPage getChackoutPage() {
+        return chackoutPage;
+    }
+
+    public HomePage getHomePage() {
         return homePage;
     }
+
+    public ProductsPage getProductsPage() {
+        return productsPage;
+    }
+    //    public WebDriver getDriver() {
+//        return driver;
+//    }
+//
+//    public HomePage getHomePage() {
+//        return homePage;
+//    }
 
 }
